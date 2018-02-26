@@ -7,51 +7,53 @@ import java.util.ArrayList;
 import first_semester_eksamen.Person;
 
 public class HandlerImpl implements Handler {
-    public static final String FILENAME = "Samples.csv";
+    public static final String FILENAME = "persons.csv";
 
     @Override
-    public String readFile(String filename) throws IOException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String[] readFile(String filename) throws IOException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Person> getSamples(String data) throws TimeFormatException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Person getHighestAge(ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Person getHighestAmplitude(ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Person getLowestAge(ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Person getBiggestRise(ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ArrayList<Person> getNameStartingWithLetter(String data) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean isTooLoud(int limit, ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public boolean isMaleOrFemale(String gender, ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void sortByTime(ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void sortByAge(ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void sortByAmplitude(ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void sortByName(ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Person> getLoudSamples(int limit, ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public ArrayList<Person> getByName(String name) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public ArrayList<Person> getSamplesBefore(Time limit, ArrayList<Person> samples) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public Person getYoungPeople(ArrayList<Person> persons) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
 }

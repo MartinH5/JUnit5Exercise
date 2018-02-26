@@ -15,17 +15,17 @@ public interface Handler {
     
     /**
      * Converts file content to proper objects
-     * @param samples The list of Samples based on file content
+     * @param persons The list of Samples based on file content
      * @return a list of Sample objects
      */
-    public Person getHighestAge(ArrayList<Person> samples);
+    public Person getHighestAge(ArrayList<Person> persons);
     
     /**
      * Identifies the Sample with the highest amplitude. Peaks are ignored.
-     * @param samples The list of Samples based on file content
+     * @param persons The list of Samples based on file content
      * @return the identified Sample object
      */
-    public Person getLowestAge(ArrayList<Person> samples);
+    public Person getLowestAge(ArrayList<Person> persons);
     
     /**
      * Identifies the sample which have increased the most in amplitude 
@@ -41,40 +41,38 @@ public interface Handler {
     /**
      * Determines whether or not any sample surpasses the set limit. 
      * Peaks matter
-     * @param limit The highest allowed value
-     * @param samples The list of Samples based on file content
+     * @param gender
+     * @param persons The list of Samples based on file content
      * @return true if any amplitude or peak is greater than the limit,
      * false in any other case.
      */
-    public boolean isTooLoud(int limit, ArrayList<Person> samples);
+    public boolean isMaleOrFemale(String gender, ArrayList<Person> persons);
     
     /**
      * Sorts samples by time
-     * @param samples The list that will be sorted
+     * @param persons The list that will be sorted
      */
-    public void sortByTime(ArrayList<Person> samples);
+    public void sortByAge(ArrayList<Person> persons);
     
     /**
      * sorts samples by amplitude (ignore peak)
-     * @param samples The list that will be sorted
+     * @param persons The list that will be sorted
      */
-    public void sortByAmplitude(ArrayList<Person> samples);
+    public void sortByName(ArrayList<Person> persons);
     
     /**
      * Retrieves a subset containing only the samples that have an amplitude 
      * higher than or equal to the limit.
-     * @param limit The maximum allowed amplitude
-     * @param samples The list from which to get the subset
+     * @param name The maximum allowed amplitude
      * @return a new list containing the subset
      */
-    public ArrayList<Person> getLoudSamples(int limit, ArrayList<Person> samples);
+    public ArrayList<Person> getByName(String name);
     
     /**
      * Retrieves a subset containing only the samples that have a timestamp 
      * earlier than the limit. (NOT equal to the limit!)
-     * @param limit The time limit
-     * @param samples The list from which to get the subset
+     * @param persons The list from which to get the subset
      * @return a new list containing the subset
      */
-    public ArrayList<Person> getSamplesBefore(Time limit, ArrayList<Person> samples);    
+    public Person getYoungPeople(ArrayList<Person> persons);    
 }
