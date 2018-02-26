@@ -11,15 +11,14 @@ public interface Handler {
      * @return The file content as a String
      * @throws IOException if file is missing or locked
      */
-    public String readFile(String filename) throws IOException;
+    public String[] readFile(String filename) throws IOException;
     
     /**
      * Converts file content to proper objects
-     * @param data The file content as a String
+     * @param samples The list of Samples based on file content
      * @return a list of Sample objects
-     * @throws TimeFormatException if time is formated badly
      */
-    public ArrayList<Person> getSamples(String data) throws TimeFormatException;
+    public Person getHighestAge(ArrayList<Person> samples);
     
     /**
      * Identifies the Sample with the highest amplitude. Peaks are ignored.
