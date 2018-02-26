@@ -1,10 +1,10 @@
 package impl;
 
 import first_semester_eksamen.Handler;
-import first_semester_eksamen.Sample;
 import first_semester_eksamen.TimeFormatException;
 import java.io.IOException;
 import java.util.ArrayList;
+import first_semester_eksamen.Person;
 
 public class HandlerImpl implements Handler {
     public static final String FILENAME = "Samples.csv";
@@ -15,42 +15,42 @@ public class HandlerImpl implements Handler {
     }
 
     @Override
-    public ArrayList<Sample> getSamples(String data) throws TimeFormatException {
+    public ArrayList<Person> getSamples(String data) throws TimeFormatException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Sample getHighestAmplitude(ArrayList<Sample> samples) {
+    public Person getHighestAmplitude(ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Sample getBiggestRise(ArrayList<Sample> samples) {
+    public Person getBiggestRise(ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public boolean isTooLoud(int limit, ArrayList<Sample> samples) {
+    public boolean isTooLoud(int limit, ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public void sortByTime(ArrayList<Sample> samples) {
+    public void sortByTime(ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public void sortByAmplitude(ArrayList<Sample> samples) {
+    public void sortByAmplitude(ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public ArrayList<Sample> getLoudSamples(int limit, ArrayList<Sample> samples) {
+    public ArrayList<Person> getLoudSamples(int limit, ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public ArrayList<Sample> getSamplesBefore(Time limit, ArrayList<Sample> samples) {
+    public ArrayList<Person> getSamplesBefore(Time limit, ArrayList<Person> samples) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     

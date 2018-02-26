@@ -19,14 +19,14 @@ public interface Handler {
      * @return a list of Sample objects
      * @throws TimeFormatException if time is formated badly
      */
-    public ArrayList<Sample> getSamples(String data) throws TimeFormatException;
+    public ArrayList<Person> getSamples(String data) throws TimeFormatException;
     
     /**
      * Identifies the Sample with the highest amplitude. Peaks are ignored.
      * @param samples The list of Samples based on file content
      * @return the identified Sample object
      */
-    public Sample getHighestAmplitude(ArrayList<Sample> samples);
+    public Person getHighestAmplitude(ArrayList<Person> samples);
     
     /**
      * Identifies the sample which have increased the most in amplitude 
@@ -37,7 +37,7 @@ public interface Handler {
      * 2 values are required
      * @return the identified Sample object
      */
-    public Sample getBiggestRise(ArrayList<Sample> samples);
+    public Person getBiggestRise(ArrayList<Person> samples);
     
     /**
      * Determines whether or not any sample surpasses the set limit. 
@@ -47,19 +47,19 @@ public interface Handler {
      * @return true if any amplitude or peak is greater than the limit,
      * false in any other case.
      */
-    public boolean isTooLoud(int limit, ArrayList<Sample> samples);
+    public boolean isTooLoud(int limit, ArrayList<Person> samples);
     
     /**
      * Sorts samples by time
      * @param samples The list that will be sorted
      */
-    public void sortByTime(ArrayList<Sample> samples);
+    public void sortByTime(ArrayList<Person> samples);
     
     /**
      * sorts samples by amplitude (ignore peak)
      * @param samples The list that will be sorted
      */
-    public void sortByAmplitude(ArrayList<Sample> samples);
+    public void sortByAmplitude(ArrayList<Person> samples);
     
     /**
      * Retrieves a subset containing only the samples that have an amplitude 
@@ -68,7 +68,7 @@ public interface Handler {
      * @param samples The list from which to get the subset
      * @return a new list containing the subset
      */
-    public ArrayList<Sample> getLoudSamples(int limit, ArrayList<Sample> samples);
+    public ArrayList<Person> getLoudSamples(int limit, ArrayList<Person> samples);
     
     /**
      * Retrieves a subset containing only the samples that have a timestamp 
@@ -77,5 +77,5 @@ public interface Handler {
      * @param samples The list from which to get the subset
      * @return a new list containing the subset
      */
-    public ArrayList<Sample> getSamplesBefore(Time limit, ArrayList<Sample> samples);    
+    public ArrayList<Person> getSamplesBefore(Time limit, ArrayList<Person> samples);    
 }
