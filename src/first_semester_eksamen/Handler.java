@@ -25,18 +25,18 @@ public interface Handler {
      * @param samples The list of Samples based on file content
      * @return the identified Sample object
      */
-    public Person getHighestAmplitude(ArrayList<Person> samples);
+    public Person getLowestAge(ArrayList<Person> samples);
     
     /**
      * Identifies the sample which have increased the most in amplitude 
      * compared to its predecessor. 
      * The compared values are signed - It is NOT the numerical difference 
      * that counts.
-     * @param samples The list of Samples based on file content - At least 
+     * @param data 
      * 2 values are required
      * @return the identified Sample object
      */
-    public Person getBiggestRise(ArrayList<Person> samples);
+    public ArrayList<Person> getNameStartingWithLetter(String data);
     
     /**
      * Determines whether or not any sample surpasses the set limit. 
